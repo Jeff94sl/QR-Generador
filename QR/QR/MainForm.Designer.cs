@@ -33,10 +33,11 @@
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.Generar = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.Abrir = new System.Windows.Forms.OpenFileDialog();
-            this.Logo = new System.Windows.Forms.Button();
             this.Emergente = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.guardarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.Abrir = new System.Windows.Forms.OpenFileDialog();
+            this.Logo = new System.Windows.Forms.Button();
+            this.acercaDeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.Emergente.SuspendLayout();
             this.SuspendLayout();
@@ -78,6 +79,25 @@
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
             // 
+            // Emergente
+            // 
+            this.Emergente.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.guardarToolStripMenuItem,
+            this.acercaDeToolStripMenuItem});
+            this.Emergente.Name = "Emergente";
+            this.Emergente.Size = new System.Drawing.Size(127, 48);
+            // 
+            // guardarToolStripMenuItem
+            // 
+            this.guardarToolStripMenuItem.Name = "guardarToolStripMenuItem";
+            this.guardarToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
+            this.guardarToolStripMenuItem.Text = "Guardar";
+            this.guardarToolStripMenuItem.Click += new System.EventHandler(this.guardarToolStripMenuItem_Click);
+            // 
+            // Abrir
+            // 
+            this.Abrir.Filter = "jpg|*.jpg|jpeg|*.jpeg|png|*.png";
+            // 
             // Logo
             // 
             this.Logo.Location = new System.Drawing.Point(91, 294);
@@ -88,19 +108,12 @@
             this.Logo.UseVisualStyleBackColor = true;
             this.Logo.Click += new System.EventHandler(this.Logo_Click);
             // 
-            // Emergente
+            // acercaDeToolStripMenuItem
             // 
-            this.Emergente.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.guardarToolStripMenuItem});
-            this.Emergente.Name = "Emergente";
-            this.Emergente.Size = new System.Drawing.Size(117, 26);
-            // 
-            // guardarToolStripMenuItem
-            // 
-            this.guardarToolStripMenuItem.Name = "guardarToolStripMenuItem";
-            this.guardarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.guardarToolStripMenuItem.Text = "Guardar";
-            this.guardarToolStripMenuItem.Click += new System.EventHandler(this.guardarToolStripMenuItem_Click);
+            this.acercaDeToolStripMenuItem.Name = "acercaDeToolStripMenuItem";
+            this.acercaDeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.acercaDeToolStripMenuItem.Text = "Acerca de";
+            this.acercaDeToolStripMenuItem.Click += new System.EventHandler(this.acercaDeToolStripMenuItem_Click);
             // 
             // MainForm
             // 
@@ -133,6 +146,7 @@
         private System.Windows.Forms.Button Logo;
         private System.Windows.Forms.ContextMenuStrip Emergente;
         private System.Windows.Forms.ToolStripMenuItem guardarToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem acercaDeToolStripMenuItem;
     }
 }
 
